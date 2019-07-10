@@ -50,8 +50,8 @@ class HitOffsetBot():
             exit(0)
 
         if msg.content.startswith('.help'):
-            await msg.channel.send('Use .get <beatmap id> or </b/ link>')
-            await msg.channel.send('example:')
+            await msg.channel.send('Grabs map data and top 50 replays to calculate hit offsets for which half of players do better/worse than')
+            await msg.channel.send('usage:')
             await msg.channel.send('.get 123456')
             await msg.channel.send('.get https://old.ppy.sh/b/123456')
             await msg.channel.send('.get https://osu.ppy.sh/beatmapsets/541289#osu/123456')

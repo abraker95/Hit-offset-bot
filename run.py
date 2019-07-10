@@ -76,8 +76,10 @@ class HitOffsetBot():
             await msg.channel.send('Please wait while I am fetching replays (~2.5 min)')
             await msg.channel.send('I will be unresponsive and might go offline but should be back when done.')
             
+            await client.change_presence(activity=discord.Game('Working...'), status=discord.Status.dnd, afk=False)
             try: times, hit_offsets = HitOffsetBot.get_hit_offsets(map_id)
             except Exception as e:
+                await client.change_presence(activity=discord.Game('Use me! Try .help'), status=discord.Status.online, afk=False)
                 await msg.channel.send('That map broke me! Blame abraker >:(')
                 await msg.channel.send(str(e))
                 return
@@ -90,12 +92,14 @@ class HitOffsetBot():
             plt.savefig('fig.png', dpi=500)
 
             await msg.channel.send('', file=discord.File('fig.png', filename='fig.png'))
+            await client.change_presence(activity=discord.Game('Use me! Try .help'), status=discord.Status.online, afk=False)
 
 
     @staticmethod
     @client.event
     async def on_ready():
         print('Bot ready')
+        await client.change_presence(activity=discord.Game('Use me! Try .help'), status=discord.Status.online, afk=False)
 
 
 TOKEN = ''

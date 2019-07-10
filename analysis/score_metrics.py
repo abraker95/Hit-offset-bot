@@ -49,7 +49,7 @@ class StdScoreMetrics():
         hit_offsets = per_hitobject_score_data[hitobject_idx][:, StdScoreDataEnums.HIT_OFFSET.value]
         hit_offsets_below_offset = hit_offsets[abs(hit_offsets) < offset]
 
-        return len(hit_offsets_below_offset)/len(hit_offsets)
+        return float(len(hit_offsets_below_offset))/float(len(hit_offsets))
 
 
     @staticmethod
@@ -74,7 +74,7 @@ class StdScoreMetrics():
 
         while curr_percent < target_percent:
             curr_percent = StdScoreMetrics.get_percent_below_offset(per_hitobject_score_data, hitobject_idx, offset)
-            offset += 1
+            offset += 0.1
 
         return offset
 

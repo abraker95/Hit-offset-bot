@@ -66,7 +66,7 @@ class HitOffsetBot():
             # Try just map id
             try: map_id = int(map_id)
             except:
-                # Try  website beatmap link
+                # Try website beatmap link
                 try: map_id = int(map_id.split('/')[-1])
                 except: 
                     await msg.channel.send('invalid beatmap id or beatmap link')
@@ -83,10 +83,10 @@ class HitOffsetBot():
                 return
 
             plt.clf()
-            plt.plot(times, hit_offsets, lw=0.1, antialiased=True)
+            plt.plot(times, hit_offsets, lw=0.3, antialiased=True)
             plt.xlabel('time (ms)')
-            plt.ylabel('average offset (ms)')
-            plt.title('Top 50 players average per-hitobject offsets')
+            plt.ylabel('offset (ms)')
+            plt.title('Per-hitobject offsets half of top 50 players do better/worse')
             plt.savefig('fig.png', dpi=500)
 
             await msg.channel.send('', file=discord.File('fig.png', filename='fig.png'))

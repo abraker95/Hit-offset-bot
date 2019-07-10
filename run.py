@@ -76,7 +76,11 @@ class HitOffsetBot():
             await msg.channel.send('Please wait while I am fetching replays (~2.5 min)')
             await msg.channel.send('I will be unresponsive and might go offline but should be back when done.')
             
-            times, hit_offsets = HitOffsetBot.get_hit_offsets(map_id)
+            try: times, hit_offsets = HitOffsetBot.get_hit_offsets(map_id)
+            except Exception as e:
+                await msg.channel.send('That map broke me! Blame abraker >:(')
+                await msg.channel.send(str(e))
+                return
 
             plt.clf()
             plt.plot(times, hit_offsets, lw=0.1, antialiased=True)

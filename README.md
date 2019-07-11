@@ -1,5 +1,7 @@
 # Hit-offset-bot
 
+Note: Support osu! standard gamemode only. Support for other gamemodes may be added upon request. Also accepting pull requests.
+
 This bot offers a way to examine the difficulty of an osu! beatmap. Difficulty of certain patterns can be correlated with the 
 variance of timed hits by players. Higher difficulty means the hits would be more all over the place while lower difficulty
 means the hits would be more precise. By calculting hit offsets half of the players hit within it is possible to guage this 

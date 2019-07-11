@@ -15,7 +15,7 @@ may result the server replying with a "too many request" error.
 
 ### Setup:
 
-Discord token id needs to be filled in run.py. osu! login info needs to be filled in online/login.py to allow the retrieval of replays.
+Discord bot token needs to be filled in run.py. osu! login info needs to be filled in online/login.py to allow the retrieval of replays.
 
 
 ### Usage:

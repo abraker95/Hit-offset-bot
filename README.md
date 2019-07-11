@@ -13,6 +13,11 @@ The most expensive operation is collecting the replays. The bot is set to collec
 roughly 2.5 minutes to collect all replays. This is required due to rate limits for downloading replays, and doing it any faster
 may result the server replying with a "too many request" error.
 
+### Setup:
+
+Discord token id needs to be filled in run.py. osu! login info needs to be filled in online/login.py to allow the retrieval of replays.
+
+
 ### Usage:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`.get [beatmap id] | [beatmap link]`
 

@@ -7,7 +7,7 @@ correlation for every hitobject in the map.
 
 The bot starts by downloading the beatmap and top 50 replays made by players, then loads the data. It calculates hit offsets
 made by each player and stacks the data for every hitobject; 50 hitoffsets for each hitobject, 1 for every replay. Finally, for
-each hitobject it solves for the offset needed to have 50% of the players satisfy the condition of hitting within the offset.
+each hitobject it solves the offset required to have 50% of the players satisfy the condition of hitting within the offset.
 
 The most expensive operation is collecting the replays. The bot is set to collect a replay every 3 seconds, which means it takes 
 roughly 2.5 minutes to collect all replays. This is required due to rate limits for downloading replays, and doing it any faster

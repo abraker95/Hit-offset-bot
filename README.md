@@ -5,7 +5,7 @@ variance of timed hits by players. Higher difficulty means the hits would be mor
 means the hits would be more precise. By calculting hit offsets half of the players hit within it is possible to guage this 
 correlation for every hitobject in the map.
 
-The bot start by downloading the beatmap and top 50 replays made by players, then loads the data. It calculates hit offsets
+The bot starts by downloading the beatmap and top 50 replays made by players, then loads the data. It calculates hit offsets
 made by each player and stacks the data for every hitobject; 50 hitoffsets for each hitobject, 1 for every replay. Finally, for
 each hitobject it solves for the offset needed to have 50% of the players satisfy the condition of hitting within the offset.
 

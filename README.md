@@ -10,7 +10,7 @@ made by each player and stacks the data for every hitobject; 50 hitoffsets for e
 each hitobject it solves for the offset needed to have 50% of the players satisfy the condition of hitting within the offset.
 
 The most expensive operation is collecting the replays. The bot is set to collect a replay every 3 seconds, which means it takes 
-roughly 2.5 minutes to collect all replays. This is required due to rate limites for downloading replays, and doing it any faster
+roughly 2.5 minutes to collect all replays. This is required due to rate limits for downloading replays, and doing it any faster
 may result the server replying with a "too many request" error.
 
 ### Usage:
